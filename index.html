@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Solar System</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #welcome-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 10;
+    }
+    #start-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #start-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Экран приветствия -->
+  <div id="welcome-screen">
+    <h1>Добро пожаловать в Солнечную систему!</h1>
+    <button id="start-button">Начать экскурсию</button>
+  </div>
+
+  <!-- Сцена дополненной реальности -->
+  <a-scene embedded arjs>
+    <!-- Камера -->
+    <a-marker-camera preset="hiro"></a-marker-camera>
+
+    <!-- Маркеры для каждой планеты -->
+    <a-marker preset="custom" type="pattern" url="markers/sun.patt">
+      <a-entity gltf-model="objects/planets/sun.glb" scale="1 1 1"></a-entity>
+    </a-marker>
+
+    <a-marker preset="custom" type="pattern" url="markers/mercury.patt">
+      <a-entity gltf-model="objects/planets/mercury.glb" scale="0.5 0.5 0.5"></a-entity>
+    </a-marker>
+
+    <a-marker preset="custom" type="pattern" url="markers/venus.patt">
+      <a-entity gltf-model="objects/planets/venus.glb" scale="0.6 0.6 0.6"></a-entity>
+    </a-marker>
+
+    <a-marker preset="custom" type="pattern" url="markers/earth.patt">
+      <a-entity gltf-model="objects/planets/earth.glb" scale="0.7 0.7 0.7"></a-entity>
+    </a-marker>
+
+    <a-marker preset="custom" type="pattern" url="markers/mars.patt">
+      <a-entity gltf-model="objects/planets/mars.glb" scale="0.5 0.5 0.5"></a-entity>
+    </a-marker>
+
+    <a-marker preset="custom" type="pattern" url="markers/jupiter.patt">
+      <a-entity gltf-model="objects/planets/jupiter.glb" scale="2 2 2"></a-entity>
+    </a-marker>
+
+    <a-marker preset="custom" type="pattern" url="markers/saturn.patt">
+      <a-entity gltf-model="objects/planets/saturn.glb" scale="1.8 1.8 1.8"></a-entity>
+    </a-marker>
+
+    <a-marker preset="custom" type="pattern" url="markers/uranus.patt">
+      <a-entity gltf-model="objects/planets/uranus.glb" scale="1.2 1.2 1.2"></a-entity>
+    </a-marker>
+
+    <a-marker preset="custom" type="pattern" url="markers/neptune.patt">
+      <a-entity gltf-model="objects/planets/neptune.glb" scale="1.1 1.1 1.1"></a-entity>
+    </a-marker>
+
+    <!-- Фон -->
+    <a-sky color="#000000"></a-sky>
+  </a-scene>
+
+  <!-- Скрипт для управления экраном приветствия -->
+  <script>
+    document.getElementById('start-button').addEventListener('click', () => {
+      document.getElementById('welcome-screen').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
