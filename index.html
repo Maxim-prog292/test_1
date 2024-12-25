@@ -5,11 +5,19 @@
 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: scroll;'>
-  <a-scene embedded arjs>
-    <a-marker  preset="hiro" >
-      <a-entity gltf-model="objects/planets/sun.glb" scale="1 1 1"></a-entity>
-    </a-marker>
-  </a-scene>
+<a-scene embedded arjs>
+      <!-- Добавляем стандартный маркер Hiro -->
+      <a-marker preset="hiro">
+        <!-- Загрузка 3D-объекта из файла -->
+        <a-entity 
+          gltf-model="objects/planets/sun.glb" 
+          scale="0.5 0.5 0.5" 
+          position="0 0 0">
+        </a-entity>
+      </a-marker>
+
+      <!-- Камера для AR -->
+      <a-entity camera></a-entity>
 </body>
 
 </html>
