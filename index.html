@@ -7,17 +7,14 @@
 <body style='margin : 0px; overflow: scroll;'>
 <a-scene embedded arjs>
       <!-- Добавляем стандартный маркер Hiro -->
-      <a-marker preset="hiro">
         <!-- Загрузка 3D-объекта из файла -->
         <a-entity 
           gltf-model="objects/planets/sun.glb" 
           scale="0.1 0.1 0.1" 
           position="0 0 10">
         </a-entity>
-      </a-marker>
+      <a-marker-camera preset='hiro'></a-marker-camera>
 
-      <!-- Камера для AR -->
-      <a-entity camera></a-entity>
 </body>
 
 </html>
