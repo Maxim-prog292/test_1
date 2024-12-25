@@ -9,15 +9,16 @@
     <style></style>
   </head>
   <body>
-    <a-scene embedded arjs>
-      <a-marker-camera preset="hiro">
-        <a-assets>
-          <a-asset-item id="sun" src="objects/planets/sun/scene.gltf"></a-asset-item>
-        </a-assets>
+    <a-scene embedded arjs='sourceType: webcam;'>
+      <a-marker type="hiro">
         <a-entity
           gltf-model="##sun"
         ></a-entity>
-      </a-marker-camera>
+        <a-assets>
+          <a-asset-item id="sun" src="objects/planets/sun/scene.gltf"></a-asset-item>
+        </a-assets>
+        
+      </a-marker>
     </a-scene>
   </body>
 </html>
