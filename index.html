@@ -11,9 +11,11 @@
   <body>
     <a-scene embedded arjs>
       <a-marker preset="hiro">
+        <a-assets>
+          <a-asset-item id="sun" src="objects/planets/sun/scene.gltf"></a-asset-item>
+        </a-assets>
         <a-entity
-          gltf-model="objects/planets/sun/scene.gltf"
-          scale="1 1 1"
+          gltf-model="##sun"
         ></a-entity>
       </a-marker>
     </a-scene>
