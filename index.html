@@ -10,14 +10,14 @@
   </head>
   <body>
     <a-scene embedded arjs>
-      <a-marker preset="hiro">
+      <a-marker-camera preset="hiro">
         <a-assets>
           <a-asset-item id="sun" src="objects/planets/sun/scene.gltf"></a-asset-item>
         </a-assets>
         <a-entity
           gltf-model="##sun"
         ></a-entity>
-      </a-marker>
+      </a-marker-camera>
     </a-scene>
   </body>
 </html>
