@@ -18,23 +18,15 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
       <!-- Добавляем стандартный маркер Hiro -->
-<!--       <a-marker preset="pattern" type="pattern" url="markers/pattern-sun.patt"> -->
+      <a-marker preset="pattern" type="pattern" url="markers/pattern-sun.patt">
         <!-- Загрузка 3D-объекта из файла -->
-      <a-nft
-            type="nft"
-      url="sun"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5">
         <a-entity 
           gltf-model="objects/planets/sun/scene.gltf" 
           scale="0.3 0.3 0.3"
               rotation="90 0 0"
           position="0 -100 0">
         </a-entity>
-      </a-nft>
-<!--       </a-marker> -->
+      </a-marker>
       <a-marker preset="pattern" type="pattern" url="markers/pattern-mercury.patt">
         <!-- Загрузка 3D-объекта из файла -->
         <a-entity 
