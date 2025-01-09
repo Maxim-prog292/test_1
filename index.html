@@ -34,10 +34,11 @@
     renderer="logarithmicDepthBuffer: true;"
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+      
 // Солнце
       <a-marker preset="pattern" type="pattern" url="markers/pattern-sun.patt">
         <a-entity 
-          gltf-model="objects/planets/sun/scene.gltf" 
+          gltf-model="objects/planets/sun.glb" 
           scale="1 1 1"
           rotation="90 0 0"
           position="0 -540 0">
@@ -48,7 +49,8 @@
                repeat="indefinite">
         </a-entity>
       </a-marker>
-      // Меркурий
+      
+// Меркурий
       <a-marker preset="pattern" type="pattern" url="markers/pattern-mercury.patt">
         <a-entity 
           gltf-model="objects/planets/mercury.glb" 
@@ -111,7 +113,7 @@
 // Уран
 <a-marker preset="pattern" type="pattern" url="markers/pattern-uran.patt">
         <a-entity 
-          gltf-model="objects/planets/uran.glb" 
+          gltf-model="objects/planets/uranus.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
@@ -121,7 +123,7 @@
 // Нептун
 <a-marker preset="pattern" type="pattern" url="markers/pattern-neptun.patt">
         <a-entity 
-          gltf-model="objects/planets/neptun.glb" 
+          gltf-model="objects/planets/neptune.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
