@@ -11,21 +11,7 @@
       
 <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script> -->
-<style>
-      .arjs-loader {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: black;
-            color: #fff;
-      }
-      .hide-loader {
-            display: none;
-      }
-</style>
+
 <body style='margin : 0px; overflow: scroll;'>
       <div class="arjs-loader">
     <p>Загрузка, пожалуйста подождите.</p>
@@ -51,106 +37,90 @@
       </a-marker>
       
 <!-- Меркурий -->
-      <a-marker preset="pattern" type="pattern" url="markers/pattern-merc.patt">
+<!--       <a-marker preset="pattern" type="pattern" url="markers/pattern-merc.patt">
         <a-entity 
           gltf-model="objects/planets/mercury.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
         </a-entity>
-      </a-marker>
+      </a-marker> -->
       
 <!-- Венера -->
-      <a-marker preset="pattern" type="pattern" url="markers/pattern-venus.patt">
+<!--       <a-marker preset="pattern" type="pattern" url="markers/pattern-venus.patt">
         <a-entity 
           gltf-model="objects/planets/venus.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
         </a-entity>
-      </a-marker>
+      </a-marker> -->
       
 <!-- Земля -->
-<a-marker preset="pattern" type="pattern" url="markers/pattern-earth.patt">
+<!-- <a-marker preset="pattern" type="pattern" url="markers/pattern-earth.patt">
         <a-entity 
           gltf-model="objects/planets/earth.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
         </a-entity>
-      </a-marker>
+      </a-marker> -->
       
 <!-- Марс -->
-<a-marker preset="pattern" type="pattern" url="markers/pattern-mars.patt">
+<!-- <a-marker preset="pattern" type="pattern" url="markers/pattern-mars.patt">
         <a-entity 
           gltf-model="objects/planets/mars.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
         </a-entity>
-      </a-marker>
+      </a-marker> -->
       
 <!-- Юпитер -->
-<a-marker preset="pattern" type="pattern" url="markers/pattern-jupiter.patt">
+<!-- <a-marker preset="pattern" type="pattern" url="markers/pattern-jupiter.patt">
         <a-entity 
           gltf-model="objects/planets/jupiter.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
         </a-entity>
-      </a-marker>
+      </a-marker> -->
       
 <!-- Сатурн -->
-<a-marker preset="pattern" type="pattern" url="markers/pattern-saturn.patt">
+<!-- <a-marker preset="pattern" type="pattern" url="markers/pattern-saturn.patt">
         <a-entity 
           gltf-model="objects/planets/saturn.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
         </a-entity>
-      </a-marker>
+      </a-marker> -->
       
 <!-- Уран -->
-<a-marker preset="pattern" type="pattern" url="markers/pattern-uranus.patt">
+<!-- <a-marker preset="pattern" type="pattern" url="markers/pattern-uranus.patt">
         <a-entity 
           gltf-model="objects/planets/uranus.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
         </a-entity>
-      </a-marker>
+      </a-marker> -->
       
 <!-- Нептун -->
-<a-marker preset="pattern" type="pattern" url="markers/pattern-neptune.patt">
+<!-- <a-marker preset="pattern" type="pattern" url="markers/pattern-neptune.patt">
         <a-entity 
           gltf-model="objects/planets/neptune.glb" 
           scale="1 1 1"
       rotation="90 0 0"
           position="0 -540 0">
         </a-entity>
-      </a-marker>
-      
-<!-- Солнечная система -->
-      <a-marker preset="pattern" type="pattern" url="markers/pattern-SOLAR_SYSTEM.patt">
-        <a-entity 
-          gltf-model="objects/planets/solar_system.glb" 
-          scale="1 1 1"
-      rotation="90 0 0"
-          position="0 -540 0">
-        </a-entity>
-      </a-marker>
+      </a-marker> -->
       
       <a-assets>
             <img id="sky" src="https://cdn.glitch.global/3109ca4d-2713-4595-96c0-4be0841be87f/8k_stars_milky_way.png?v=1735378887577">
       </a-assets>
       <a-sky src="#sky"></a-sky>
 </a-scene>
-      <script>
-            let loader = document.querySelector('.arjs-loader');
-            document.addEventListener('DOMContentLoaded', ()=>{
-                  loader.classList.add('hide-loader');
-            })
-      </script>
 </body>
 
 </html>
