@@ -18,6 +18,12 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
       
+      <a-entity id="sphere" geometry="primitive: sphere"
+                material="color: #EFEFEF; shader: flat"
+                position="0 100 0"
+                light="type: point; intensity: 3">
+      </a-entity>
+      
       <a-marker preset="pattern" type="pattern" url="markers/pattern-sun.patt">
         <a-entity 
           gltf-model="objects/planets/sun.glb" 
